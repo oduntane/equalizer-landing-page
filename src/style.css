@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    --cyan: #66e2dc;
+    --orange: #fa7453;
+    --yellow: #ffb964;
+    --white: #fcfaf9;
+    --slate: #191826;
+    --spacing-2500: 12.5rem;
+    --spacing-1600: 8rem;
+    --spacing-1000: 5rem;
+    --spacing-800: 4rem;
+    --spacing-700: 3.5rem;
+    --spacing-600: 3rem;
+    --spacing-500: 2.5rem;
+    --spacing-400: 2rem;
+    --spacing-300: 1.5rem;
+    --spacing-250: 1.25rem;
+    --spacing-200: 1rem;
+    --spacing-100: 0.5rem;
+}
+
+.text {
+    font-family: "IBM Plex Sans", serif;
+}
+
+.text.preset-1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: -1px;
+}
+
+.text.preset-2 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+}
+
+.text.preset-3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+}
+
+.text.preset-4 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.text.preset-5 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.text.preset-5.bold {
+    font-weight: 700;
+}
+
+.text.preset-6 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 180%;
+    letter-spacing: 0;
+}
+
+/**
+* TODO: Change .preset-1 and preset-4 for tablet and desktop layout
+*/
+
+body {
+    width: 100vw;
+    background-image: url("/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 24rem 40.9375rem ;
+    background-position-x: 183px;
+    background-position-y: -152px;
+    background-origin: border-box;
+}
+
+header {
+    width: 100%;
+    padding-inline: var(--spacing-250);
+    padding-block: var(--spacing-800) 10.875rem;
+    color: var(--slate);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-800);
+    text-align: left;
+}
+
+header .logo {
+    width: 9rem;
+    height: 2rem;
+    display: block;
+}
+
+main > div:nth-of-type(1) {
+    background-color: var(--slate);
+    background-image: url("/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-size: 19.5rem 29.25rem;
+    background-position: center top;
+    position: relative;
+    height: 23.75rem;
+}
+
+main > div:nth-of-type(1) img {
+    width: 13.06rem;
+    height: 26.875rem;
+    margin-inline: auto;
+    display: block;
+    position: relative;
+    top: -6.875rem;
+}
+
+main > div:nth-of-type(2) {
+    padding-inline: var(--spacing-250);
+    padding-block: var(--spacing-600) 6.9375rem;
+    background-color: var(--orange);
+    color: var(--slate);
+}
+
+main > div:nth-of-type(2) h2 {
+    margin-bottom: var(--spacing-500);
+}
+
+
+main > div:nth-of-type(2) > p {
+    margin-bottom: var(--spacing-300);
+}
+
+main > div:nth-of-type(2) > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-600);
+}
+
+main > div:nth-of-type(2) > div:nth-of-type(1) span {
+    margin-inline-end: 1rem;
+}
+
+
+main > div:nth-of-type(2) > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+    border: none;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
+button > svg {
+    margin-inline-end: var(--spacing-100);
+}
+
+button:first-of-type {
+    color: var(--white);
+    background-color: var(--slate);
+    fill: var(--white);
+}
+
+button:first-of-type:hover {
+    background-color: var(--cyan);
+    color: var(--slate);
+    fill: var(--slate);
+}
+
+button:last-of-type {
+    color: var(--slate);
+    background-color: var(--white);
+    fill: var(--slate)
+}
+
+button:last-of-type:hover {
+    background-color: var(--yellow);
+    color: var(--slate);
+}
+
+footer {
+    padding-inline: var(--spacing-250);
+    padding-block: var(--spacing-800) var(--spacing-1000);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+footer > .logo {
+    display: block;
+    width: 9rem;
+    height: 2rem
+}
+
+footer > div:last-of-type {
+    display: flex;
+    gap: var(--spacing-400);
+    flex-direction: start;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    fill: var(--slate);
+}
+
+.icon:hover {
+    fill: var(--orange);
+}
