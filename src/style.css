@@ -77,10 +77,6 @@
     letter-spacing: 0;
 }
 
-/**
-* TODO: Change .preset-1 and preset-4 for tablet and desktop layout
-*/
-
 body {
     width: 100vw;
     background-image: url("/bg-main-mobile.png");
@@ -106,6 +102,10 @@ header .logo {
     width: 9rem;
     height: 2rem;
     display: block;
+}
+
+header h1 {
+    margin-block-end: var(--spacing-500);
 }
 
 main > div:nth-of-type(1) {
@@ -227,3 +227,168 @@ footer > div:last-of-type {
 .icon:hover {
     fill: var(--orange);
 }
+
+@media (min-width: 768px) {
+    .text.preset-1 {
+        font-size: 4.26rem;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -1px;
+    }
+
+    .text.text.preset-4 {
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    body {
+        background-image: url("/bg-pattern-1.svg"), url("/bg-main-tablet.png");
+        background-size: 16.67rem 25rem, 48.81rem 59.43rem ;
+        background-position: calc(100vw - (16.67rem - 3.12rem)) -2.5rem, 6.3125rem -12rem;
+        
+    }
+
+    header {
+        padding-inline: 2.75rem;
+        padding-block-end: var(--spacing-800);
+        text-align: left;
+    }
+
+    main {
+        padding: var(--spacing-2500) 2.75rem;
+        position: relative;
+        max-height: 1000px;
+    }
+
+    /* header h1 {
+        max-width: 416px;
+    } */
+
+    main > div:nth-of-type(1) {
+        height: 37.5rem;
+        border-radius: 0.75rem;
+        background-image: url("/bg-pattern-2.svg");
+        background-size: 19.5rem 29.25rem;
+        background-position: top left;
+    }
+
+    main > div:nth-of-type(1) img {
+        width: 16.88rem;
+        height: 34.75rem;
+        top: -7.125rem;
+        margin-inline-start: 42.9px;
+    }
+
+    main > div:nth-of-type(2) {
+        position: relative;
+        top: -514px;
+        max-width: 22.25rem;
+        padding: var(--spacing-600);
+        border-radius: 1rem;
+        margin-inline-start: auto;
+        right: var(--spacing-800);
+    }
+
+    footer {
+        padding-inline: var(--spacing-500);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    footer > div:first-of-type {
+        flex-basis: 100%;
+        flex-grow: 0;
+        justify-self: left;
+    }
+
+    footer > div:nth-of-type(2) {
+        flex-basis: 500px;
+        flex-grow: 0;
+    }
+
+
+    footer > div:nth-of-type(3) {
+        flex-basis: auto;
+        flex-grow: 1;
+        align-self: center;
+    }
+    
+}
+
+@media (min-width: 1440px) {
+    .text.preset-1 {
+        font-weight: 700;
+        font-size: 5.5rem;
+        line-height: 100%;
+        letter-spacing: -1px;
+    }
+
+    .text.preset-4 {
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    body {
+        background-image: url("/bg-pattern-1.svg"), url("/bg-main-desktop.png");
+        background-size: 312px 468px, 1353px 951px;
+        background-position: calc(100vw - 312px) -40px, -51px -192px;
+    }
+
+    header {
+        padding-inline: 160px;
+        width: 100vw;
+    }
+
+    header h1 {
+        max-width: 928px;
+    }
+
+    header p {
+        max-width: 750px;
+        text-align: left;
+    }
+
+
+    main {
+        padding-inline: 160px;
+    }
+
+    main > div:nth-of-type(1) img {
+        width: 349px;
+        height: 642px;
+        margin-left: 71.5px;
+    }
+
+    main > div:nth-of-type(1) {
+        background-size: 312px 468px;
+        background-position: 368px top
+    }
+
+    main > div:nth-of-type(2) {
+        max-width: 512px;
+        padding: 56px;
+    }
+
+    footer {
+        padding: 160px;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    
+    footer > div:nth-of-type(1) {
+        flex-basis: unset;
+    }
+
+    footer > div:nth-of-type(3) {
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+
+}
+
